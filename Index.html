@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hover</title>
+<style>
+   /* Center the button on the page */
+#button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  height: 30px;
+  width: 80px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Hide the info box initially */
+#info-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 300px;
+  height: 200px;
+  text-align: left;
+  padding-top: 20px;
+  background-color: crimson;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+#button:active ~ #info-box {
+  display: block;
+}
+
+#button:active {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+   <button id="button">Read Info</button>
+   <div id="info-box">This is the info</div>
+   
+</body>
+</html>
